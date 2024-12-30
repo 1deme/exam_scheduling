@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Visualizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            padding: 20px;
+            background-color: #0074d9;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .file-input {
+            margin-bottom: 20px;
+        }
+        .table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #e0f7fa;
+        }
+        th, td {
+            border: 1px solid #b0bec5;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #4fc3f7;
+            color: #fff;
+        }
+        td:hover {
+            background-color: #81d4fa;
+            color: #000;
+            font-weight: bold;
+        }
+        .room-title {
+            text-align: left;
+            padding: 10px;
+            font-size: 1.2em;
+            background-color: #b3e5fc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>exam schedule</h1>
+    </header>
+    <div class="container">
+        <input type="file" class="file-input" id="fileInput" accept="application/json">
+        <div id="tables"></div>
+    </div>
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const jsonData = JSON.parse(e.target.result);
+                    generateTables(jsonData);
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function generateTables(data) {
+            const tablesContainer = document.getElementById('tables');
+            tablesContainer.innerHTML = '';
+
+            const rooms = new Set();
+            for (const slot in data) {
+                data[slot].forEach(entry => rooms.add(entry.room));
+            }
+
+            rooms.forEach(room => {
+                const roomData = Array(20).fill(null).map(() => []);
+                for (const slot in data) {
+                    const slotIndex = parseInt(slot.split(' ')[1]);
+                    data[slot].forEach(entry => {
+                        if (entry.room === room) {
+                            roomData[slotIndex].push(entry.exam);
+                        }
+                    });
+                }
+
+                const tableContainer = document.createElement('div');
+                const roomTitle = document.createElement('div');
+                roomTitle.classList.add('room-title');
+                roomTitle.textContent = `Room: ${room}`;
+
+                const table = document.createElement('table');
+
+                const headerRow = document.createElement('tr');
+                headerRow.innerHTML = '<th>Hour/Day</th>';
+                for (let day = 1; day <= 5; day++) {
+                    const th = document.createElement('th');
+                    th.textContent = `Day ${day}`;
+                    headerRow.appendChild(th);
+                }
+                table.appendChild(headerRow);
+
+                for (let hour = 0; hour < 4; hour++) {
+                    const row = document.createElement('tr');
+                    const hourCell = document.createElement('td');
+                    hourCell.textContent = `Slot ${hour}`;
+                    row.appendChild(hourCell);
+
+                    for (let day = 0; day < 5; day++) {
+                        const cell = document.createElement('td');
+                        const slotIndex = day * 4 + hour;
+                        cell.textContent = roomData[slotIndex].join(', ') || '-';
+                        row.appendChild(cell);
+                    }
+                    table.appendChild(row);
+                }
+
+                tableContainer.appendChild(roomTitle);
+                tableContainer.appendChild(table);
+                tablesContainer.appendChild(tableContainer);
+            });
+        }
+    </script>
+</body>
+</html>

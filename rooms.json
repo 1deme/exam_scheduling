@@ -1,0 +1,22 @@
+[
+    {"name": "Room1", "capacity": 50},
+    {"name": "Room2", "capacity": 50},
+    {"name": "Room3", "capacity": 60},
+    {"name": "Room4", "capacity": 70},
+    {"name": "Room5", "capacity": 80},
+    {"name": "Room6", "capacity": 40},
+    {"name": "Room7", "capacity": 50},
+    {"name": "Room8", "capacity": 60},
+    {"name": "Room9", "capacity": 10},
+    {"name": "Room10", "capacity": 20},
+    {"name": "Room11", "capacity": 30},
+    {"name": "Room12", "capacity": 40},
+    {"name": "Room13", "capacity": 50},
+    {"name": "Room14", "capacity": 60},
+    {"name": "Room15", "capacity": 70},
+    {"name": "Room16", "capacity": 80},
+    {"name": "Room17", "capacity": 90},
+    {"name": "Room18", "capacity": 100},
+    {"name": "Room19", "capacity": 110},
+    {"name": "Room20", "capacity": 120}
+]

@@ -1,0 +1,15 @@
+[
+    {"name": "Student1", "exams": ["Data Structures", "Algorithms", "Calculus I", "Project Management"]},
+    {"name": "Student2", "exams": ["Discrete Mathematics", "Calculus II", "Software Engineering"]},
+    {"name": "Student3", "exams": ["Operating Systems", "Machine Learning", "Artificial Intelligence", "Database Management Systems"]},
+    {"name": "Student4", "exams": ["Financial Accounting", "Marketing Management", "Managerial Economics"]},
+    {"name": "Student5", "exams": ["Corporate Finance", "Organizational Behavior", "Business Ethics", "Entrepreneurship", "Project Management"]},
+    {"name": "Student6", "exams": ["Data Structures", "Algorithms", "Artificial Intelligence"]},
+    {"name": "Student7", "exams": ["Linear Algebra", "Probability and Statistics", "Operations Research"]},
+    {"name": "Student8", "exams": ["Software Engineering", "Theory of Computation", "Machine Learning"]},
+    {"name": "Student9", "exams": ["Strategic Management", "Supply Chain Management", "Corporate Finance"]},
+    {"name": "Student10", "exams": ["Human Resource Management", "Entrepreneurship", "Digital Marketing"]},
+    {"name": "Student11", "exams": ["Project Management", "Business Ethics", "Data Science"]},
+    {"name": "Student12", "exams": ["Calculus II", "Operating Systems", "Database Management Systems"]},
+    {"name": "Student13", "exams": ["Marketing Management", "Financial Accounting"]}
+]
