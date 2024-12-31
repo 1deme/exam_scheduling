@@ -12,7 +12,7 @@ class Room:
         self.capacity = capacity
 
 def create_data_model():
-    with open("exams.json", "r") as file:
+    with open("exam_student_assignments.json", "r") as file:
         courses_data = json.load(file)
     courses = [
         Course(
@@ -35,7 +35,7 @@ def main():
     # Create CP-SAT model
     model = cp_model.CpModel()
 
-    num_slots = 20  # Adjust as needed
+    num_slots = 500  # Adjust as needed
 
     # Decision variables: exam_assignments[exam][room][slot] = 1 if exam is assigned to room at slot
     exam_assignments = {}

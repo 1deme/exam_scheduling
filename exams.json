@@ -1,14 +1,248 @@
 [
     {
-        "name": "Math101",
-        "student_emails": ["alice@example.com", "bob@example.com", "charlie@example.com"]
+        "name": "Elective2"
     },
     {
-        "name": "History201",
-        "student_emails": ["alice@example.com", "david@example.com"]
+        "name": "Linear Algebra for Informatics"
     },
     {
-        "name": "Physics301",
-        "student_emails": ["eve@example.com", "frank@example.com"]
+        "name": "Discrete Probability Theory"
+    },
+    {
+        "name": "Organizational Behavior"
+    },
+    {
+        "name": "Calculus"
+    },
+    {
+        "name": "Software Engineering Practical Course"
+    },
+    {
+        "name": "English2"
+    },
+    {
+        "name": "Economics1 - Principles in Microeconomics"
+    },
+    {
+        "name": "Introduction to Computer Networking and Distributed Systems"
+    },
+    {
+        "name": "Elective7"
+    },
+    {
+        "name": "Analysis3"
+    },
+    {
+        "name": "Introduction to Software Engineering"
+    },
+    {
+        "name": "Concentration Subject3"
+    },
+    {
+        "name": "Advanced Topics in Optimization"
+    },
+    {
+        "name": "MinorSubject5"
+    },
+    {
+        "name": "Human Resource Management & Leadership"
+    },
+    {
+        "name": "MinorSubject4"
+    },
+    {
+        "name": "Numerical Analysis"
+    },
+    {
+        "name": "Numerical Methods for Differential Equations"
+    },
+    {
+        "name": "Numerical Programming"
+    },
+    {
+        "name": "Elective4"
+    },
+    {
+        "name": "Linear Algebra"
+    },
+    {
+        "name": "Academic Writing and Communication Skills"
+    },
+    {
+        "name": "Introduction to Computer Architecture"
+    },
+    {
+        "name": "Analysis for Informatics"
+    },
+    {
+        "name": "Introduction to Programming"
+    },
+    {
+        "name": "Introduction to Optimization"
+    },
+    {
+        "name": "Elective5"
+    },
+    {
+        "name": "Analysis1"
+    },
+    {
+        "name": "Analysis2"
+    },
+    {
+        "name": "Databases1"
+    },
+    {
+        "name": "Principles of Operations Management"
+    },
+    {
+        "name": "Calculus for Business1"
+    },
+    {
+        "name": "Elective1"
+    },
+    {
+        "name": "Scripting Languages"
+    },
+    {
+        "name": "MinorSubject7"
+    },
+    {
+        "name": "Fundamentals of Algorithms and Data Structure"
+    },
+    {
+        "name": "Laboratory: Computer Organization and Computer Architecture"
+    },
+    {
+        "name": "Advanced Topics in Numerical Mathematics"
+    },
+    {
+        "name": "Introduction to Informatics2"
+    },
+    {
+        "name": "Introduction to Probability and Statistics"
+    },
+    {
+        "name": "Constrained Nonlinear Optimization"
+    },
+    {
+        "name": "Fundamentals of Programming"
+    },
+    {
+        "name": "Principles of Project Management"
+    },
+    {
+        "name": "Linear Optimization"
+    },
+    {
+        "name": "Elective3"
+    },
+    {
+        "name": "Financial Accounting"
+    },
+    {
+        "name": "Linear Algebra and Discrete Structures"
+    },
+    {
+        "name": "Introduction into Marketing"
+    },
+    {
+        "name": "Introduction into Strategic Management"
+    },
+    {
+        "name": "Investment and Financial Management"
+    },
+    {
+        "name": "Elective6"
+    },
+    {
+        "name": "Modelling Elective"
+    },
+    {
+        "name": "Discrete Structures"
+    },
+    {
+        "name": "Stochastic Differential Equations"
+    },
+    {
+        "name": "Concentration Subject1"
+    },
+    {
+        "name": "Numerical Linear Algebra"
+    },
+    {
+        "name": "MinorSubject3"
+    },
+    {
+        "name": "Foundations in Entrepreneurial Business"
+    },
+    {
+        "name": "Research Methods"
+    },
+    {
+        "name": "Cost Accounting"
+    },
+    {
+        "name": "Law - Business Law"
+    },
+    {
+        "name": "Introduction to Mathematical Software"
+    },
+    {
+        "name": "Introduction to Probability"
+    },
+    {
+        "name": "Business English"
+    },
+    {
+        "name": "Introduction to Theory of Computation"
+    },
+    {
+        "name": "Calculus for Business2"
+    },
+    {
+        "name": "Introduction to Stochastic Processes"
+    },
+    {
+        "name": "Introduction to Informatics1"
+    },
+    {
+        "name": "Concentration Subject2"
+    },
+    {
+        "name": "Statistics for Business & Economics"
+    },
+    {
+        "name": "Management Science"
+    },
+    {
+        "name": "English1"
+    },
+    {
+        "name": "Databases2"
+    },
+    {
+        "name": "Business Ethics"
+    },
+    {
+        "name": "Economics2 - Principles in Macroeconomics"
+    },
+    {
+        "name": "MinorSubject2"
+    },
+    {
+        "name": "MinorSubject6"
+    },
+    {
+        "name": "MinorSubject1"
+    },
+    {
+        "name": "Introduction into Programming and Data Analysis"
+    },
+    {
+        "name": "Basic Principles of Operating Systems and System Software"
+    },
+    {
+        "name": "Advanced Topics in Probability and Statistics"
     }
 ]
