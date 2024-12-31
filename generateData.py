@@ -1,57 +1,57 @@
 import json
 import random
 
-# Load data from the JSON files
-with open('exams.json', 'r') as exams_file:
-    exams = json.load(exams_file)
+# Read exams and student emails from the JSON files
+with open('exams.json', 'r') as f:
+    exams = json.load(f)
 
-with open('studentMails.json', 'r') as students_file:
-    student_emails = json.load(students_file)
+with open('studentMails.json', 'r') as f:
+    student_emails = json.load(f)
 
-# List to store the results
-output_data = []
+# Create the exam-student assignments
+def create_exam_student_assignments(exams, student_emails):
+    # Ensure the first 700 students are assigned to the first 55 subjects
+    # and the remaining 300 students to the last 25 subjects
+    group_1_students = student_emails[:700]  # First 700 students
+    group_2_students = student_emails[700:]  # Last 300 students
 
-# Split exams into two groups: overlapping and non-overlapping
-num_exams = len(exams)
-overlapping_exams = exams[:num_exams // 2]
-non_overlapping_exams = exams[num_exams // 2:]
+    # Split the exams into two parts
+    group_1_exams = exams[:55]  # First 55 subjects
+    group_2_exams = exams[55:]  # Remaining 25 subjects
 
-# Create a pool of shared students for overlapping exams
-shared_students_pool = random.sample(student_emails, k=random.randint(50, 100))
+    # Result to store the final exam assignments
+    exam_student_assignments = []
 
-# Assign students to overlapping exams
-for exam in overlapping_exams:
-    exam_name = exam["name"]
-    num_students = random.randint(10, 300)
+    # Function to assign students to exams
+    def assign_students_to_exams(exams_list, students_list):
+        random.shuffle(students_list)  # Shuffle students for randomness
+        assignments = []
+        
+        # Assign each exam to a random selection of students
+        for exam in exams_list:
+            # Random number of students for the current exam, between 10 and 400
+            num_students = random.randint(10, 400)
+            assigned_students = students_list[:num_students]
+            students_list = students_list[num_students:]  # Remove assigned students
+            assignments.append({
+                "name": exam,
+                "student_emails": assigned_students
+            })
+        return assignments
 
-    # Combine shared students with unique ones
-    shared_emails = random.sample(shared_students_pool, k=min(len(shared_students_pool), random.randint(5, 20)))
-    unique_emails = random.sample(student_emails, k=num_students - len(shared_emails))
-    assigned_emails = shared_emails + unique_emails
+    # Assign the first 55 exams to the first 700 students
+    exam_student_assignments.extend(assign_students_to_exams(group_1_exams, group_1_students))
 
-    # Shuffle to make the distribution look more natural
-    random.shuffle(assigned_emails)
+    # Assign the remaining 25 exams to the last 300 students
+    exam_student_assignments.extend(assign_students_to_exams(group_2_exams, group_2_students))
 
-    output_data.append({
-        "name": exam_name,
-        "student_emails": assigned_emails
-    })
+    return exam_student_assignments
 
-# Assign students to non-overlapping exams
-for exam in non_overlapping_exams:
-    exam_name = exam["name"]
-    num_students = random.randint(10, 300)
+# Create the assignments
+assignments = create_exam_student_assignments(exams, student_emails)
 
-    # Assign entirely unique students
-    assigned_emails = random.sample(student_emails, k=num_students)
+# Save the result to a new JSON file
+with open('exam_student_assignments.json', 'w') as f:
+    json.dump(assignments, f, indent=4)
 
-    output_data.append({
-        "name": exam_name,
-        "student_emails": assigned_emails
-    })
-
-# Write the output to a JSON file
-with open('exam_student_assignments.json', 'w') as output_file:
-    json.dump(output_data, output_file, indent=4)
-
-print("Generated exam_student_assignments.json")
+print("Assignment file 'exam_student_assignments.json' has been created.")

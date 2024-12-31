@@ -1,0 +1,395 @@
+{
+    "Slot 0": [],
+    "Slot 1": [],
+    "Slot 2": [],
+    "Slot 3": [],
+    "Slot 4": [],
+    "Slot 5": [
+        {
+            "room": "A 0-3",
+            "exam": "Concentration Subject1"
+        },
+        {
+            "room": "A 0-2",
+            "exam": "Databases2"
+        },
+        {
+            "room": "A 0-1",
+            "exam": "Calculus for Business2"
+        },
+        {
+            "room": "307",
+            "exam": "Research Methods"
+        },
+        {
+            "room": "305",
+            "exam": "Modelling Elective"
+        },
+        {
+            "room": "112",
+            "exam": "Organizational Behavior"
+        },
+        {
+            "room": "113",
+            "exam": "Constrained Nonlinear Optimization"
+        },
+        {
+            "room": "213",
+            "exam": "Scripting Languages"
+        },
+        {
+            "room": "212",
+            "exam": "Analysis2"
+        },
+        {
+            "room": "211",
+            "exam": "Introduction to Computer Architecture"
+        },
+        {
+            "room": "321",
+            "exam": "Numerical Analysis"
+        },
+        {
+            "room": "320",
+            "exam": "Elective2"
+        },
+        {
+            "room": "CH",
+            "exam": "Calculus"
+        }
+    ],
+    "Slot 6": [],
+    "Slot 7": [],
+    "Slot 8": [],
+    "Slot 9": [
+        {
+            "room": "A 0-3",
+            "exam": "MinorSubject1"
+        },
+        {
+            "room": "A 0-2",
+            "exam": "English1"
+        },
+        {
+            "room": "A 0-1",
+            "exam": "Introduction to Theory of Computation"
+        },
+        {
+            "room": "307",
+            "exam": "Discrete Probability Theory"
+        },
+        {
+            "room": "305",
+            "exam": "Discrete Probability Theory"
+        },
+        {
+            "room": "112",
+            "exam": "Linear Algebra and Discrete Structures"
+        },
+        {
+            "room": "113",
+            "exam": "Introduction to Probability and Statistics"
+        },
+        {
+            "room": "213",
+            "exam": "Discrete Probability Theory"
+        },
+        {
+            "room": "212",
+            "exam": "Discrete Probability Theory"
+        },
+        {
+            "room": "211",
+            "exam": "Discrete Probability Theory"
+        },
+        {
+            "room": "321",
+            "exam": "MinorSubject4"
+        },
+        {
+            "room": "320",
+            "exam": "Organizational Behavior"
+        },
+        {
+            "room": "CH",
+            "exam": "Linear Algebra for Informatics"
+        }
+    ],
+    "Slot 10": [],
+    "Slot 11": [],
+    "Slot 12": [],
+    "Slot 13": [
+        {
+            "room": "A 0-3",
+            "exam": "MinorSubject6"
+        },
+        {
+            "room": "A 0-2",
+            "exam": "Management Science"
+        },
+        {
+            "room": "A 0-1",
+            "exam": "Business English"
+        },
+        {
+            "room": "307",
+            "exam": "Foundations in Entrepreneurial Business"
+        },
+        {
+            "room": "305",
+            "exam": "Elective6"
+        },
+        {
+            "room": "112",
+            "exam": "Financial Accounting"
+        },
+        {
+            "room": "113",
+            "exam": "Introduction to Informatics2"
+        },
+        {
+            "room": "213",
+            "exam": "Elective1"
+        },
+        {
+            "room": "212",
+            "exam": "Analysis1"
+        },
+        {
+            "room": "211",
+            "exam": "Academic Writing and Communication Skills"
+        },
+        {
+            "room": "321",
+            "exam": "Human Resource Management & Leadership"
+        },
+        {
+            "room": "320",
+            "exam": "Introduction to Software Engineering"
+        },
+        {
+            "room": "CH",
+            "exam": "English2"
+        }
+    ],
+    "Slot 14": [],
+    "Slot 15": [
+        {
+            "room": "A 0-3",
+            "exam": "MinorSubject2"
+        },
+        {
+            "room": "A 0-2",
+            "exam": "Statistics for Business & Economics"
+        },
+        {
+            "room": "A 0-1",
+            "exam": "Introduction to Probability"
+        },
+        {
+            "room": "307",
+            "exam": "MinorSubject3"
+        },
+        {
+            "room": "305",
+            "exam": "Calculus"
+        },
+        {
+            "room": "112",
+            "exam": "Elective3"
+        },
+        {
+            "room": "113",
+            "exam": "Advanced Topics in Numerical Mathematics"
+        },
+        {
+            "room": "213",
+            "exam": "Calculus for Business1"
+        },
+        {
+            "room": "212",
+            "exam": "Elective5"
+        },
+        {
+            "room": "211",
+            "exam": "Linear Algebra"
+        },
+        {
+            "room": "321",
+            "exam": "Elective2"
+        },
+        {
+            "room": "320",
+            "exam": "Analysis3"
+        },
+        {
+            "room": "CH",
+            "exam": "Software Engineering Practical Course"
+        }
+    ],
+    "Slot 16": [],
+    "Slot 17": [
+        {
+            "room": "A 0-3",
+            "exam": "Concentration Subject1"
+        },
+        {
+            "room": "A 0-2",
+            "exam": "Concentration Subject2"
+        },
+        {
+            "room": "A 0-1",
+            "exam": "Introduction to Mathematical Software"
+        },
+        {
+            "room": "307",
+            "exam": "Numerical Linear Algebra"
+        },
+        {
+            "room": "305",
+            "exam": "Investment and Financial Management"
+        },
+        {
+            "room": "112",
+            "exam": "Linear Optimization"
+        },
+        {
+            "room": "113",
+            "exam": "Laboratory: Computer Organization and Computer Architecture"
+        },
+        {
+            "room": "213",
+            "exam": "Principles of Operations Management"
+        },
+        {
+            "room": "212",
+            "exam": "Introduction to Optimization"
+        },
+        {
+            "room": "211",
+            "exam": "Elective4"
+        },
+        {
+            "room": "321",
+            "exam": "MinorSubject5"
+        },
+        {
+            "room": "320",
+            "exam": "Elective7"
+        }
+    ],
+    "Slot 18": [],
+    "Slot 19": [],
+    "Slot 20": [
+        {
+            "room": "A 0-3",
+            "exam": "Economics2 - Principles in Macroeconomics"
+        },
+        {
+            "room": "A 0-2",
+            "exam": "Introduction to Informatics1"
+        },
+        {
+            "room": "A 0-1",
+            "exam": "Law - Business Law"
+        },
+        {
+            "room": "307",
+            "exam": "Stochastic Differential Equations"
+        },
+        {
+            "room": "305",
+            "exam": "Introduction into Strategic Management"
+        },
+        {
+            "room": "112",
+            "exam": "Principles of Project Management"
+        },
+        {
+            "room": "113",
+            "exam": "Fundamentals of Algorithms and Data Structure"
+        },
+        {
+            "room": "213",
+            "exam": "Organizational Behavior"
+        },
+        {
+            "room": "212",
+            "exam": "Introduction to Programming"
+        },
+        {
+            "room": "211",
+            "exam": "Numerical Programming"
+        },
+        {
+            "room": "321",
+            "exam": "Advanced Topics in Optimization"
+        },
+        {
+            "room": "320",
+            "exam": "Introduction to Computer Networking and Distributed Systems"
+        }
+    ],
+    "Slot 21": [],
+    "Slot 22": [],
+    "Slot 23": [],
+    "Slot 24": [],
+    "Slot 25": [
+        {
+            "room": "A 0-3",
+            "exam": "Business Ethics"
+        },
+        {
+            "room": "A 0-2",
+            "exam": "Introduction to Stochastic Processes"
+        },
+        {
+            "room": "A 0-1",
+            "exam": "Cost Accounting"
+        },
+        {
+            "room": "307",
+            "exam": "Discrete Structures"
+        },
+        {
+            "room": "305",
+            "exam": "Introduction into Marketing"
+        },
+        {
+            "room": "112",
+            "exam": "Fundamentals of Programming"
+        },
+        {
+            "room": "113",
+            "exam": "MinorSubject7"
+        },
+        {
+            "room": "213",
+            "exam": "Databases1"
+        },
+        {
+            "room": "212",
+            "exam": "Analysis for Informatics"
+        },
+        {
+            "room": "211",
+            "exam": "Numerical Methods for Differential Equations"
+        },
+        {
+            "room": "321",
+            "exam": "Concentration Subject3"
+        },
+        {
+            "room": "320",
+            "exam": "Economics1 - Principles in Microeconomics"
+        },
+        {
+            "room": "CH",
+            "exam": "Elective2"
+        }
+    ],
+    "Slot 26": [],
+    "Slot 27": [],
+    "Slot 28": [],
+    "Slot 29": []
+}

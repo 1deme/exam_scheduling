@@ -35,7 +35,9 @@ def main():
     # Create CP-SAT model
     model = cp_model.CpModel()
 
-    num_slots = 500  # Adjust as needed
+    constraintCnt = 0
+
+    num_slots = 30  # Adjust as needed
 
     # Decision variables: exam_assignments[exam][room][slot] = 1 if exam is assigned to room at slot
     exam_assignments = {}
@@ -48,27 +50,33 @@ def main():
     # Constraints
     # 1. Each exam must be assigned to at least one room in one slot. 100 constraints
     for exam in exams:
+        constraintCnt += 1
         model.Add(sum(exam_assignments[(exam, room, slot)] for room in rooms for slot in range(num_slots)) >= 1)
 
 
+    print(constraintCnt)
     # 2. Room capacity constraint. 100 constraints
     for exam in exams:
+        constraintCnt += 1
         model.Add(
             sum(exam_assignments[(exam, room, slot)] * room.capacity for room in rooms for slot in range(num_slots))
             >= len(exam.student_emails)
         )
 
             
+    print(constraintCnt)
     # 4. only one exam per room per slot. 200 constraints
     for room in rooms:
         for slot in range(num_slots):
+            constraintCnt += 1
             model.Add(
                 sum(
                     exam_assignments[(exam, room, slot)]
                     for exam in exams
                 ) <= 1
             )
-
+    othercnt = 0
+    print(constraintCnt)
     # 3. Conflict constraint: Exams with common students cannot be scheduled in the same slot
     for i in range(len(exams)):
         for j in range(i + 1, len(exams)):
@@ -77,15 +85,21 @@ def main():
 
             # Check if there are common students
             if set(exam1.student_emails) & set(exam2.student_emails):
+
                 # Add constraint for all slots
                 for slot in range(num_slots):
+                    constraintCnt += 1
                     model.Add(
                         sum(exam_assignments[(exam1, room, slot)] for room in rooms) +
                         sum(exam_assignments[(exam2, room, slot)] for room in rooms)
                         <= 1
                     )
+            else:
+                othercnt+=1
 
-    
+    print(constraintCnt)
+    print(othercnt)
+    #stop code execution
     # Decision variable: slot_used[slot] = 1 if any exam is scheduled in that slot
     slot_used = {}
     for slot in range(num_slots):
