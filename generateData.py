@@ -22,21 +22,51 @@ def create_exam_student_assignments(exams, student_emails):
     # Result to store the final exam assignments
     exam_student_assignments = []
 
-    # Function to assign students to exams
+    # Function to assign students to exams, making sure no exam is over or underfilled
     def assign_students_to_exams(exams_list, students_list):
         random.shuffle(students_list)  # Shuffle students for randomness
         assignments = []
+        num_students = len(students_list)
+
+        # Distribute students across exams (max 5 exams per student)
+        student_exam_count = {student: 0 for student in students_list}
+        exam_assignments = {exam: [] for exam in exams_list}
         
-        # Assign each exam to a random selection of students
+        # Function to assign a student to an exam if they haven't reached the max
+        def assign_student_to_exam(student, exam):
+            if student_exam_count[student] < 5:
+                exam_assignments[exam].append(student)
+                student_exam_count[student] += 1
+
+        # Fill the exams with students, ensuring no one takes more than 5 exams
         for exam in exams_list:
-            # Random number of students for the current exam, between 10 and 400
-            num_students = random.randint(10, 400)
-            assigned_students = students_list[:num_students]
-            students_list = students_list[num_students:]  # Remove assigned students
+            # Calculate the number of students needed for this exam (between 10 and 400)
+            required_students = random.randint(10, 400)
+            available_students = [student for student in students_list if student_exam_count[student] < 5]
+
+            # If there are enough students to assign
+            if len(available_students) >= required_students:
+                random.shuffle(available_students)  # Shuffle available students for randomness
+                assigned_students = available_students[:required_students]
+
+                # Assign the selected students to this exam
+                for student in assigned_students:
+                    assign_student_to_exam(student, exam)
+
+            else:
+                # If there aren't enough students left, assign as many as possible without exceeding 5 exams per student
+                random.shuffle(available_students)  # Shuffle available students for randomness
+                assigned_students = available_students[:len(available_students)]
+                for student in assigned_students:
+                    assign_student_to_exam(student, exam)
+
+        # Build the final assignment list for this set of exams
+        for exam in exams_list:
             assignments.append({
                 "name": exam,
-                "student_emails": assigned_students
+                "student_emails": exam_assignments[exam]
             })
+
         return assignments
 
     # Assign the first 55 exams to the first 700 students

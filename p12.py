@@ -37,7 +37,7 @@ def main():
 
     constraintCnt = 0
 
-    num_slots = 30  # Adjust as needed
+    num_slots = 25  # Adjust as needed
 
     # Decision variables: exam_assignments[exam][room][slot] = 1 if exam is assigned to room at slot
     exam_assignments = {}
@@ -54,6 +54,13 @@ def main():
         model.Add(sum(exam_assignments[(exam, room, slot)] for room in rooms for slot in range(num_slots)) >= 1)
 
 
+    # exam must be assigned to at most 3 slots
+    for exam in exams:
+        for room in rooms:
+            constraintCnt += 1
+            model.Add(sum(exam_assignments[(exam, room, slot)] for slot in range(num_slots)) <= 3)
+
+
     print(constraintCnt)
     # 2. Room capacity constraint. 100 constraints
     for exam in exams:
@@ -62,7 +69,6 @@ def main():
             sum(exam_assignments[(exam, room, slot)] * room.capacity for room in rooms for slot in range(num_slots))
             >= len(exam.student_emails)
         )
-
             
     print(constraintCnt)
     # 4. only one exam per room per slot. 200 constraints
